@@ -23,6 +23,7 @@ class MapReduce {
             threads = (pthread_t*) malloc(sizeof(pthread_t) * (num_mappers + num_reducers));
             aggregated_list.resize(nr_of_files);
             letter_list.resize(LETTERS);
+            final_list.resize(LETTERS);
             for (int i = 0; i < LETTERS; i++) {
                 pthread_mutex_t mutex;
                 pthread_mutex_init(&mutex, NULL);
@@ -156,48 +157,58 @@ class MapReduce {
             pthread_barrier_wait(&instance->barrier);
             
             if (t_data.id >= instance->num_mappers) {
-                int start = 0;  
+                int start = 0;
+                int hold_idx;
                 while (start < instance->LETTERS) {
                     pthread_mutex_lock(&instance->inputVariable);
-                    int hold_idx = start;
                     unordered_map<string, set<int>>& letter_idx_map = instance->letter_list[start];
-                    vector<pair<string, set<int>>> sorted_words(letter_idx_map.begin(), letter_idx_map.end());
+                    vector<pair<string, set<int>>> sorted_words;
+                    for (const auto& pair : letter_idx_map) {
+                        sorted_words.push_back(pair);
+                    }
+                    hold_idx = start;
                     start++;
+                    // cout << "aa " << endl;
                     pthread_mutex_unlock(&instance->inputVariable);
                     sort(sorted_words.begin(), sorted_words.end(), sort_func);
+                    instance->final_list[hold_idx] = sorted_words;
 
 
-                    string file(1, (char) hold_idx + 97);
+                    // string file(1, (char) hold_idx + 97);
                     // ofstream fout("out/" + file + ".txt");
-                    ofstream fout(file + ".txt");
-                    for (auto& entry : sorted_words) {
-                        fout << entry.first << ":[";
-                        auto last = prev(entry.second.end());
-                        for(auto it = entry.second.begin(); it != entry.second.end(); it++) {
-                            if (it == last) {
-                                fout << *it << "]" << endl;
-                            } else {
-                                fout << *it << " ";
+                    // ofstream fout(file + ".txt");
+                    // for (auto& entry : sorted_words) {
+                    //     fout << entry.first << ":[";
+                    //     auto last = prev(entry.second.end());
+                    //     for(auto it = entry.second.begin(); it != entry.second.end(); it++) {
+                    //         if (it == last) {
+                    //             fout << *it << "]" << endl;
+                    //         } else {
+                    //             fout << *it << " ";
+                    //         }
+                    //     }
+                    // }
+                }
+                if (t_data.id == instance->num_mappers) {
+                    for (int i = 0; i < instance->LETTERS; i++) {
+                        string file(1, (char) i + 97);
+                        // ofstream fout("out/" + file + ".txt");
+                        ofstream fout(file + ".txt");
+                        for (auto& entry : instance->final_list[i]) {
+                            fout << entry.first << ":[";
+                            auto last = prev(entry.second.end());
+                            for(auto it = entry.second.begin(); it != entry.second.end(); it++) {
+                                if (it == last) {
+                                    fout << *it << "]" << endl;
+                                } else {
+                                    fout << *it << " ";
+                                }
                             }
                         }
+
                     }
                 }
             }
-
-            // pthread_barrier_wait(&instance->barrier);
-            // if (t_data.id == 0) {
-            //     for (int i = 0; i < 26; i ++) {
-            //         cout << "For letter: " << (char) (i + 97) << endl;
-            //         unordered_map<string, set<int>>& map = instance->letter_list[i];
-            //         for (auto& x : map) {
-            //             cout << x.first << " ";
-            //             for (auto y : x.second) {
-            //                 cout << y << " ";
-            //             }
-            //             cout << endl;
-            //         }
-            //     }
-            // }
 
 
             return NULL;
@@ -207,6 +218,7 @@ class MapReduce {
         vector<unordered_map<string, int>> aggregated_list;
         vector<pthread_mutex_t> mutex_vec;
         vector<unordered_map<string, set<int>>> letter_list;
+        vector<vector<pair<string, set<int>>>> final_list;
         pthread_mutex_t inputVariable;
         pthread_barrier_t barrier;
         ThreadData* thread_data;
