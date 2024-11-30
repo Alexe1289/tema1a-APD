@@ -23,7 +23,6 @@ class MapReduce {
             threads = (pthread_t*) malloc(sizeof(pthread_t) * (num_mappers + num_reducers));
             aggregated_list.resize(nr_of_files);
             letter_list.resize(LETTERS);
-            // final_list.resize(LETTERS);
             for (int i = 0; i < LETTERS; i++) {
                 pthread_mutex_t mutex;
                 pthread_mutex_init(&mutex, NULL);
@@ -82,6 +81,10 @@ class MapReduce {
                 while(instance->files_list.size() > 0) {
 
                     pthread_mutex_lock(&instance->inputVariable);
+                    if (instance->files_list.size() <= 0) {
+                        pthread_mutex_unlock(&instance->inputVariable);
+                        break;
+                    }
                     instance->file_idx++;
                     int hold_idx = instance->file_idx; //holds the current file index
                     file_name = instance->files_list.front();
@@ -128,9 +131,12 @@ class MapReduce {
             pthread_barrier_wait(&instance->barrier);
             
             if (t_data.id >= instance->num_mappers) {
-                // int start = 0;  
                 while (instance->start < instance->LETTERS) {
                     pthread_mutex_lock(&instance->inputVariable);
+                    if (instance->start >= instance->LETTERS) {
+                        pthread_mutex_unlock(&instance->inputVariable);
+                        break;
+                    }
                     int hold_idx = instance->start;
                     unordered_map<string, set<int>>& letter_idx_map = instance->letter_list[hold_idx];
                     instance->start++;
@@ -139,20 +145,14 @@ class MapReduce {
                         for (auto& pair : instance->aggregated_list[i]) {
 
                             if (pair.first[0] == hold_idx + 97) {
-                                // cout << pair.first << endl;
                                 letter_idx_map[pair.first].insert(pair.second);
-                                // cout << "it did not fail " << endl;
                             }
                         }
                     }
-                    // cout << "a aa " << endl;
-                    // cout << " letter : " << hold_idx + 'a';
                     vector<pair<string, set<int>>> sorted_words(letter_idx_map.begin(), letter_idx_map.end());
-                    // cout << "seg ?" << endl;
                     sort(sorted_words.begin(), sorted_words.end(), sort_func);
-
+                    pthread_mutex_lock(&instance->inputVariable);
                     string file(1, (char) hold_idx + 97);
-                    // ofstream fout("out/" + file + ".txt");
                     ofstream fout(file + ".txt");
                     for (auto& entry : sorted_words) {
                         fout << entry.first << ":[";
@@ -165,24 +165,9 @@ class MapReduce {
                             }
                         }
                     }
+                    pthread_mutex_unlock(&instance->inputVariable);
                 }
             }
-
-            // pthread_barrier_wait(&instance->barrier);
-            // if (t_data.id == 0) {
-            //     for (int i = 0; i < 26; i ++) {
-            //         cout << "For letter: " << (char) (i + 97) << endl;
-            //         unordered_map<string, set<int>>& map = instance->letter_list[i];
-            //         for (auto& x : map) {
-            //             cout << x.first << " ";
-            //             for (auto y : x.second) {
-            //                 cout << y << " ";
-            //             }
-            //             cout << endl;
-            //         }
-            //     }
-            // }
-
 
             return NULL;
         }
