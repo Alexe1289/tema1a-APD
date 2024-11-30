@@ -128,14 +128,14 @@ class MapReduce {
             pthread_barrier_wait(&instance->barrier);
             
             if (t_data.id >= instance->num_mappers) {
-                int start = 0;  
-                while (start < instance->LETTERS) {
+                // int start = 0;  
+                while (instance->start < instance->LETTERS) {
                     pthread_mutex_lock(&instance->inputVariable);
-                    int hold_idx = start;
+                    int hold_idx = instance->start;
                     unordered_map<string, set<int>>& letter_idx_map = instance->letter_list[hold_idx];
-                    start++;
+                    instance->start++;
                     pthread_mutex_unlock(&instance->inputVariable);
-                    for (int i = 0; i < 10; i++) {
+                    for (int i = 0; i < instance->nr_of_files; i++) {
                         for (auto& pair : instance->aggregated_list[i]) {
 
                             if (pair.first[0] == hold_idx + 97) {
@@ -145,15 +145,15 @@ class MapReduce {
                             }
                         }
                     }
-                    cout << "a aa " << endl;
+                    // cout << "a aa " << endl;
                     // cout << " letter : " << hold_idx + 'a';
                     vector<pair<string, set<int>>> sorted_words(letter_idx_map.begin(), letter_idx_map.end());
-                    cout << "seg ?" << endl;
+                    // cout << "seg ?" << endl;
                     sort(sorted_words.begin(), sorted_words.end(), sort_func);
 
                     string file(1, (char) hold_idx + 97);
-                    ofstream fout("out/" + file + ".txt");
-                    // ofstream fout(file + ".txt");
+                    // ofstream fout("out/" + file + ".txt");
+                    ofstream fout(file + ".txt");
                     for (auto& entry : sorted_words) {
                         fout << entry.first << ":[";
                         auto last = prev(entry.second.end());
@@ -197,6 +197,7 @@ class MapReduce {
         ThreadData* thread_data;
         pthread_t* threads;
         int file_idx = 0;
+        int start = 0;
         int nr_of_files;
         const int LETTERS = 26;
 
