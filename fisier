@@ -1,0 +1,1190 @@
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.4s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 16.96MB 2.3s done
+#5 DONE 2.4s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 DONE 0.1s
+
+#10 [apd_service] exporting to image
+#10 exporting layers 0.1s done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.1s
+Sat Dec  7 12:04:46 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.18 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.71 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.59 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.81 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.51 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.43 secunde
+Acceleratie: 2.74
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.70 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.42 secunde
+Acceleratie: 2.81
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.29 secunde
+Acceleratie: 4.07
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B 0.0s done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.4s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.6s done
+#5 DONE 2.6s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:04:59 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.00 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.70 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.59 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.80 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.53 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.39 secunde
+Acceleratie: 2.56
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.70 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.40 secunde
+Acceleratie: 2.50
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.28 secunde
+Acceleratie: 3.57
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.4s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.5s done
+#5 DONE 2.5s
+
+#6 [apd_service 3/5] RUN apt-get install -y bc
+#6 CACHED
+
+#7 [apd_service 4/5] COPY checker /apd/checker
+#7 CACHED
+
+#8 [apd_service 2/5] RUN apt-get update -y
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:05:11 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.01 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.71 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.59 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.81 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.51 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.39 secunde
+Acceleratie: 2.59
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.71 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.41 secunde
+Acceleratie: 2.46
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.29 secunde
+Acceleratie: 3.48
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.5s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.5s done
+#5 DONE 2.5s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:05:24 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 0.99 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.71 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.59 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.82 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.52 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.38 secunde
+Acceleratie: 2.61
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.70 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.41 secunde
+Acceleratie: 2.41
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.29 secunde
+Acceleratie: 3.41
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.5s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.4s done
+#5 DONE 2.4s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:05:36 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.02 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.72 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.60 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.80 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.52 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.39 secunde
+Acceleratie: 2.62
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.72 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.42 secunde
+Acceleratie: 2.43
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.29 secunde
+Acceleratie: 3.52
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.5s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.4s done
+#5 DONE 2.4s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:05:48 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.01 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.72 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.59 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.80 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.52 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.39 secunde
+Acceleratie: 2.59
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.69 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.41 secunde
+Acceleratie: 2.46
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.29 secunde
+Acceleratie: 3.48
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.5s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.4s done
+#5 DONE 2.4s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:06:00 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.00 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.75 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.60 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.81 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.52 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.41 secunde
+Acceleratie: 2.44
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.69 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.42 secunde
+Acceleratie: 2.38
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.29 secunde
+Acceleratie: 3.45
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.4s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.4s done
+#5 DONE 2.4s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:06:12 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.01 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.77 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.60 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.81 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.52 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.39 secunde
+Acceleratie: 2.59
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.68 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.42 secunde
+Acceleratie: 2.40
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.30 secunde
+Acceleratie: 3.37
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.5s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.4s done
+#5 DONE 2.4s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:06:25 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.01 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.72 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.59 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.82 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.52 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.39 secunde
+Acceleratie: 2.59
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.68 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.43 secunde
+Acceleratie: 2.35
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.30 secunde
+Acceleratie: 3.37
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
+#0 building with "default" instance using docker driver
+
+#1 [apd_service internal] load build definition from Dockerfile
+#1 transferring dockerfile: 144B done
+#1 DONE 0.0s
+
+#2 [apd_service internal] load metadata for docker.io/library/gcc:10.2
+#2 DONE 0.5s
+
+#3 [apd_service internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [apd_service 1/5] FROM docker.io/library/gcc:10.2@sha256:c448e92bcadb9dce6a23b9672df25fb5aec490222d78a32199857a49215a1d69
+#4 DONE 0.0s
+
+#5 [apd_service internal] load build context
+#5 transferring context: 59.09kB 2.5s done
+#5 DONE 2.5s
+
+#6 [apd_service 2/5] RUN apt-get update -y
+#6 CACHED
+
+#7 [apd_service 3/5] RUN apt-get install -y bc
+#7 CACHED
+
+#8 [apd_service 4/5] COPY checker /apd/checker
+#8 CACHED
+
+#9 [apd_service 5/5] COPY src /apd/src
+#9 CACHED
+
+#10 [apd_service] exporting to image
+#10 exporting layers done
+#10 writing image sha256:076c872e11f6df3b9bc3ec772baecbd8d9179d2bb8dd4668c25b1fa8add63147 done
+#10 naming to docker.io/library/tema1a-apd_service done
+#10 DONE 0.0s
+Sat Dec  7 12:06:37 UTC 2024
+total 2.6M
+-rwxrwxrwx 1 root root   69 Dec  7 12:04 Makefile
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 a.txt
+-rwxrwxrwx 1 root root  76K Dec  2 12:35 b.txt
+-rwxrwxrwx 1 root root 104K Dec  2 12:35 c.txt
+-rwxrwxrwx 1 root root  74K Dec  2 12:35 d.txt
+-rwxrwxrwx 1 root root  53K Dec  2 12:35 e.txt
+-rwxrwxrwx 1 root root  69K Dec  2 12:35 f.txt
+-rwxrwxrwx 1 root root  43K Dec  2 12:35 g.txt
+-rwxrwxrwx 1 root root  70K Dec  2 12:35 h.txt
+-rwxrwxrwx 1 root root  50K Dec  2 12:35 i.txt
+-rwxrwxrwx 1 root root 8.8K Dec  2 12:35 j.txt
+-rwxrwxrwx 1 root root  12K Dec  2 12:35 k.txt
+-rwxrwxrwx 1 root root  56K Dec  2 12:35 l.txt
+-rwxrwxrwx 1 root root  67K Dec  2 12:35 m.txt
+-rwxrwxrwx 1 root root 8.1K Dec  7 12:03 main.cpp
+-rwxrwxrwx 1 root root 897K Nov 28 21:05 main.exe
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 n.txt
+-rwxrwxrwx 1 root root  39K Dec  2 12:35 o.txt
+drwxrwxrwx 2 root root 4.0K Nov 30 18:29 out
+-rwxrwxrwx 1 root root  82K Dec  2 12:35 p.txt
+-rwxrwxrwx 1 root root 6.6K Dec  2 12:35 q.txt
+-rwxrwxrwx 1 root root  61K Dec  2 12:35 r.txt
+-rwxrwxrwx 1 root root 164K Dec  2 12:35 s.txt
+-rwxrwxrwx 1 root root  84K Dec  2 12:35 t.txt
+-rwxrwxrwx 1 root root 263K Dec  7 12:04 tema1
+-rwxrwxrwx 1 root root  18K Nov 30 14:49 test.txt
+drwxrwxrwx 8 root root 4.0K Nov 29 20:53 test_in
+drwxrwxrwx 2 root root 4.0K Nov 26 15:02 test_in_small
+-rwxrwxrwx 1 root root   73 Nov 30 14:52 test_small.txt
+-rwxrwxrwx 1 root root  29K Dec  2 12:35 u.txt
+-rwxrwxrwx 1 root root  15K Dec  2 12:35 v.txt
+-rwxrwxrwx 1 root root  71K Dec  2 12:35 w.txt
+-rwxrwxrwx 1 root root 1.6K Dec  2 12:35 x.txt
+-rwxrwxrwx 1 root root  11K Dec  2 12:35 y.txt
+-rwxrwxrwx 1 root root  621 Dec  2 12:35 z.txt
+Se ruleaza varianta cu M=1 si R=1...
+Rularea a durat 1.01 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=2...
+Rularea a durat 0.71 secunde
+OK
+
+Se ruleaza varianta cu M=1 si R=4...
+Rularea a durat 0.59 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=1...
+Rularea a durat 0.83 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=2...
+Rularea a durat 0.52 secunde
+OK
+
+Se ruleaza varianta cu M=2 si R=4...
+Rularea a durat 0.39 secunde
+Acceleratie: 2.59
+OK
+
+Se ruleaza varianta cu M=4 si R=1...
+Rularea a durat 0.68 secunde
+OK
+
+Se ruleaza varianta cu M=4 si R=2...
+Rularea a durat 0.41 secunde
+Acceleratie: 2.46
+OK
+
+Se ruleaza varianta cu M=4 si R=4...
+Rularea a durat 0.29 secunde
+Acceleratie: 3.48
+OK
+
+==========================
+
+
+Scalabilitate: 48/48
+Corectitudine: 36/36
+Total:       84/84
